@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "responsive-design": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "1c756f7e216c16c91be788a0f64ae5d94451b5ffe076a1e120f671e2a3c9bd3e"
+    },
+    "spring-boot-application": {
+      "source": "aj-geddes/useful-ai-prompts",
+      "sourceType": "github",
+      "computedHash": "332a969a15e077cf3ccb1fbd601129853af294015106be0187a30cdec39afc69"
+    }
+  }
+}
