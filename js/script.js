@@ -73,7 +73,7 @@ const translations = {
         servicios_subtitle: "Professional quality in every application",
         servicio_vehicular: "Vehicle Tinting",
         servicio_vehicular_desc: "Complete protection for your vehicle. Blocks up to 99% of UV rays, reduces interior heat and improves privacy.",
-        servicio_residential: "Residential Tinting",
+        servicio_residencial: "Residential Tinting",
         servicio_residencial_desc: "Transform your home. Reduces energy consumption, protects your furniture and enjoys greater comfort.",
         servicio_comercial: "Commercial Tinting",
         servicio_comercial_desc: "Professional business solutions. Improves energy efficiency and creates comfortable work environments.",
