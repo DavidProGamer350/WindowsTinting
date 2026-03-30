@@ -169,6 +169,10 @@ img {
 }
 
 /* ========== NAVBAR ========== */
+.nav-close-item {
+    display: none;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -925,10 +929,6 @@ img {
         cursor: pointer;
         padding: 10px;
         transition: color var(--transition-fast);
-    }
-    
-    .nav-close:hover {
-        color: var(--color-accent);
     }
     
     .nav-toggle.active span:nth-child(1) {
