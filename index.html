@@ -25,10 +25,19 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#galeria" class="nav-link">Galería</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li class="nav-close-item">
+                    <button class="nav-close" id="navClose" aria-label="Cerrar menú">&times;</button>
+                </li>
+                <li><a href="#inicio" class="nav-link" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link" data-i18n="nav_servicios">Servicios</a></li>
+                <li><a href="#galeria" class="nav-link" data-i18n="nav_galeria">Galería</a></li>
+                <li><a href="#contacto" class="nav-link" data-i18n="nav_contacto">Contacto</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+                        <span class="lang-es">ES</span>
+                        <span class="lang-en">EN</span>
+                    </button>
+                </li>
                 <li>
                     <a href="https://wa.me/17867934440" class="btn btn-whatsapp nav-cta" target="_blank">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -47,8 +56,8 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1 class="hero-title">Windows Tinting <span class="accent">JD</span></h1>
-            <p class="hero-subtitle">Protección, estilo y confort en un solo servicio</p>
-            <p class="hero-description">Transformamos tu vehículo con polarizado profesional. Protección UV, reducción
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Protección, estilo y confort en un solo servicio</p>
+            <p class="hero-description" data-i18n="hero_description">Transformamos tu vehículo con polarizado profesional. Protección UV, reducción
                 de calor y máxima privacidad.</p>
             <div class="hero-buttons">
                 <a href="https://wa.me/17867934440?text=Hola,%20me%20interesa%20el%20servicio%20de%20polarizado"
@@ -57,9 +66,9 @@
                         <path
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                     </svg>
-                    Cotizar Ahora
+                    <span data-i18n="hero_cta">Cotizar Ahora</span>
                 </a>
-                <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+                <a href="#servicios" class="btn btn-outline" data-i18n="hero_cta2">Ver Servicios</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -73,8 +82,8 @@
     <section class="services" id="servicios">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nuestros Servicios</h2>
-                <p class="section-subtitle">Calidad profesional en cada aplicación</p>
+                <h2 class="section-title" data-i18n="servicios_title">Nuestros Servicios</h2>
+                <p class="section-subtitle" data-i18n="servicios_subtitle">Calidad profesional en cada aplicación</p>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-animate>
@@ -85,8 +94,8 @@
                             <path d="M8 21h8M12 17v4" />
                         </svg>
                     </div>
-                    <h3 class="service-title">Polarizado Vehicular</h3>
-                    <p class="service-description">Protección completa para tu vehículo. Bloquea hasta 99% de rayos UV,
+                    <h3 class="service-title" data-i18n="servicio_vehicular">Polarizado Vehicular</h3>
+                    <p class="service-description" data-i18n="servicio_vehicular_desc">Protección completa para tu vehículo. Bloquea hasta 99% de rayos UV,
                         reduce el calor interior y mejora la privacidad.</p>
                     <ul class="service-features">
                         <li>Protección UV</li>
@@ -103,8 +112,8 @@
                             <polyline points="9 22 9 12 15 12 15 22" />
                         </svg>
                     </div>
-                    <h3 class="service-title">Polarizado Residencial</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="servicio_residencial">Polarizado Residencial</h3>
+                    <p class="service-description" data-i18n="servicio_residencial_desc">
                         Mejora el confort de tu hogar con películas para ventanas. Reduce el calor, controla la entrada
                         de luz y aumenta la privacidad en tus espacios.
                     </p>
@@ -127,8 +136,8 @@
                             <line x1="16" y1="6" x2="16" y2="6" />
                         </svg>
                     </div>
-                    <h3 class="service-title">Polarizado Comercial</h3>
-                    <p class="service-description">Soluciones empresariales profesionales. Mejora la eficiencia
+                    <h3 class="service-title" data-i18n="servicio_comercial">Polarizado Comercial</h3>
+                    <p class="service-description" data-i18n="servicio_comercial_desc">Soluciones empresariales profesionales. Mejora la eficiencia
                         energética y crea ambientes de trabajo cómodos.</p>
                     <ul class="service-features">
                         <li>Eficiencia energética</li>
@@ -145,8 +154,8 @@
     <section class="comparison" id="comparador">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Ver la Diferencia</h2>
-                <p class="section-subtitle">Arrastra el slider para comparar antes y después</p>
+                <h2 class="section-title" data-i18n="comparador_title">Ver la Diferencia</h2>
+                <p class="section-subtitle" data-i18n="comparador_subtitle">Arrastra el slider para comparar antes y después</p>
             </div>
             <div class="comparison-container" id="comparisonSlider">
                 <div class="comparison-image comparison-after">
@@ -177,8 +186,8 @@
     <section class="gallery" id="galeria">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Galería de Trabajos</h2>
-                <p class="section-subtitle">Conoce algunos de nuestros proyectos</p>
+                <h2 class="section-title" data-i18n="galeria_title">Galería de Trabajos</h2>
+                <p class="section-subtitle" data-i18n="galeria_subtitle">Conoce algunos de nuestros proyectos</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-animate>
@@ -219,23 +228,23 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text" data-animate>
-                    <h2 class="section-title">Sobre Nosotros</h2>
-                    <p class="about-description">Con años de experiencia en el sector, <strong>Windows Tinting
+                    <h2 class="section-title" data-i18n="about_title">Sobre Nosotros</h2>
+                    <p class="about-description" data-i18n="about_desc1">Con años de experiencia en el sector, <strong>Windows Tinting
                             JD</strong> se ha consolidado como líder en servicios de polarizado profesional.</p>
-                    <p class="about-description">Nuestro compromiso es con la calidad, la satisfacción del cliente y la
+                    <p class="about-description" data-i18n="about_desc2">Nuestro compromiso es con la calidad, la satisfacción del cliente y la
                         excelencia en cada trabajo que realizamos.</p>
                     <div class="about-features">
                         <div class="about-feature">
-                            <span class="feature-number">500+</span>
-                            <span class="feature-label">Vehículos atendidos</span>
+                            <span class="feature-number">1000+</span>
+                            <span class="feature-label" data-i18n="about_vehiculos">Vehículos atendidos</span>
                         </div>
                         <div class="about-feature">
                             <span class="feature-number">98%</span>
-                            <span class="feature-label">Clientes satisfechos</span>
+                            <span class="feature-label" data-i18n="about_satisfechos">Clientes satisfechos</span>
                         </div>
                         <div class="about-feature">
                             <span class="feature-number">5+</span>
-                            <span class="feature-label">Años de experiencia</span>
+                            <span class="feature-label" data-i18n="about_experiencia">Años de experiencia</span>
                         </div>
                     </div>
                 </div>
@@ -262,9 +271,9 @@
                                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                         </svg>
                     </div>
-                    <h3>WhatsApp</h3>
-                    <p>Chatea con nosotros</p>
-                    <a href="https://wa.me/17867934440" class="btn btn-whatsapp" target="_blank">Enviar mensaje</a>
+                    <h3 data-i18n="contacto_whatsapp">WhatsApp</h3>
+                    <p data-i18n="contacto_whatsapp_desc">Chatea con nosotros</p>
+                    <a href="https://wa.me/17867934440" class="btn btn-whatsapp" target="_blank" data-i18n="contacto_whatsapp_cta">Enviar mensaje</a>
                 </div>
                 <div class="contact-card" data-animate>
                     <div class="contact-icon">
@@ -274,8 +283,8 @@
                                 d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                         </svg>
                     </div>
-                    <h3>Teléfono</h3>
-                    <p>Llamadas directas</p>
+                    <h3 data-i18n="contacto_telefono">Teléfono</h3>
+                    <p data-i18n="contacto_telefono_desc">Llamadas directas</p>
                     <a href="tel:+17867934440" class="btn btn-outline">+1 (234) 567-890</a>
                 </div>
                 <div class="contact-card" data-animate>
@@ -286,21 +295,21 @@
                             <circle cx="12" cy="10" r="3" />
                         </svg>
                     </div>
-                    <h3>Ubicación</h3>
-                    <p>Visítanos en nuestro taller</p>
+                    <h3 data-i18n="contacto_ubicacion">Ubicación</h3>
+                    <p data-i18n="contacto_ubicacion_desc">Visítanos en nuestro taller</p>
                     <span class="location-text">Miami- Florida, Estados Unidos</span>
                 </div>
             </div>
             <div class="cta-box" data-animate>
-                <h3>¿Listo para transformar tu vehículo?</h3>
-                <p>Contáctanos hoy mismo y obtén una cotización sin compromiso</p>
+                <h3 data-i18n="cta_title">¿Listo para transformar tu vehículo?</h3>
+                <p data-i18n="cta_desc">Contáctanos hoy mismo y obtén una cotización sin compromiso</p>
                 <a href="https://wa.me/17867934440?text=Hola,%20me%20interesa%20una%20cotización"
                     class="btn btn-primary btn-large" target="_blank">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                     </svg>
-                    Cotizar Ahora
+                    <span data-i18n="cta_button">Cotizar Ahora</span>
                 </a>
             </div>
         </div>
@@ -312,19 +321,19 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Windows Tinting <span class="accent">JD</span></h3>
-                    <p>Profesionalismo y calidad en cada trabajo</p>
+                    <p data-i18n="footer_brand">Profesionalismo y calidad en cada trabajo</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
+                    <h4 data-i18n="footer_links">Enlaces rápidos</h4>
                     <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#galeria">Galería</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+                        <li><a href="#servicios" data-i18n="nav_servicios">Servicios</a></li>
+                        <li><a href="#galeria" data-i18n="nav_galeria">Galería</a></li>
+                        <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h4>Síguenos</h4>
+                    <h4 data-i18n="footer_social">Síguenos</h4>
                     <div class="social-icons">
                         <a href="#" aria-label="Facebook">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

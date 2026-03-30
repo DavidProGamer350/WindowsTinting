@@ -4,12 +4,154 @@ document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initSmoothScroll();
     initLightbox();
+    initLanguageToggle();
 });
+
+const translations = {
+    es: {
+        nav_inicio: "Inicio",
+        nav_servicios: "Servicios",
+        nav_galeria: "Galería",
+        nav_contacto: "Contacto",
+        hero_subtitle: "Protección, estilo y confort en un solo servicio",
+        hero_description: "Transformamos tu vehículo con polarizado profesional. Protección UV, reducción de calor y máxima privacidad.",
+        hero_cta: "Cotizar Ahora",
+        hero_cta2: "Ver Servicios",
+        servicios_title: "Nuestros Servicios",
+        servicios_subtitle: "Calidad profesional en cada aplicación",
+        servicio_vehicular: "Polarizado Vehicular",
+        servicio_vehicular_desc: "Protección completa para tu vehículo. Bloquea hasta 99% de rayos UV, reduce el calor interior y mejora la privacidad.",
+        servicio_residencial: "Polarizado Residencial",
+        servicio_residencial_desc: "Transforma tu hogar. Disminuye el consumo de energía, protege tus muebles y disfruta de mayor confort.",
+        servicio_comercial: "Polarizado Comercial",
+        servicio_comercial_desc: "Soluciones empresariales profesionales. Mejora la eficiencia energética y crea ambientes de trabajo cómodos.",
+        comparador_title: "Ver la Diferencia",
+        comparador_subtitle: "Arrastra el slider para comparar antes y después",
+        comparador_before: "SIN Polarizado",
+        comparador_after: "CON Polarizado",
+        galeria_title: "Galería de Trabajos",
+        galeria_subtitle: "Conoce algunos de nuestros proyectos",
+        about_title: "Sobre Nosotros",
+        about_desc1: "Con años de experiencia en el sector, <strong>Windows Tinting JD</strong> se ha consolidado como líder en servicios de polarizado profesional.",
+        about_desc2: "Nuestro compromiso es con la calidad, la satisfacción del cliente y la excelencia en cada trabajo que realizamos.",
+        about_vehiculos: "Vehículos atendidos",
+        about_satisfechos: "Clientes satisfechos",
+        about_experiencia: "Años de experiencia",
+        contacto_title: "Contáctanos",
+        contacto_subtitle: "Estamos listos para atenderte",
+        contacto_whatsapp: "WhatsApp",
+        contacto_whatsapp_desc: "Chatea con nosotros",
+        contacto_whatsapp_cta: "Enviar mensaje",
+        contacto_telefono: "Teléfono",
+        contacto_telefono_desc: "Llamadas directas",
+        contacto_ubicacion: "Ubicación",
+        contacto_ubicacion_desc: "Visítanos en nuestro taller",
+        cta_title: "¿Listo para transformar tu vehículo?",
+        cta_desc: "Contáctanos hoy mismo y obtén una cotización sin compromiso",
+        cta_button: "Cotizar Ahora",
+        footer_brand: "Profesionalismo y calidad en cada trabajo",
+        footer_links: "Enlaces rápidos",
+        footer_social: "Síguenos",
+        footer_copyright: "Todos los derechos reservados.",
+        vehicle_sedan: "Sedán Ejecutivo",
+        vehicle_suv: "SUV Premium",
+        vehicle_deportivo: "Deportivo",
+        vehicle_camioneta: "Camioneta Familiar",
+        vehicle_luxury: "Luxury",
+        vehicle_clasico: "Clásico"
+    },
+    en: {
+        nav_inicio: "Home",
+        nav_servicios: "Services",
+        nav_galeria: "Gallery",
+        nav_contacto: "Contact",
+        hero_subtitle: "Protection, style and comfort in one service",
+        hero_description: "We transform your vehicle with professional tinting. UV protection, heat reduction and maximum privacy.",
+        hero_cta: "Get Quote",
+        hero_cta2: "View Services",
+        servicios_title: "Our Services",
+        servicios_subtitle: "Professional quality in every application",
+        servicio_vehicular: "Vehicle Tinting",
+        servicio_vehicular_desc: "Complete protection for your vehicle. Blocks up to 99% of UV rays, reduces interior heat and improves privacy.",
+        servicio_residential: "Residential Tinting",
+        servicio_residencial_desc: "Transform your home. Reduces energy consumption, protects your furniture and enjoys greater comfort.",
+        servicio_comercial: "Commercial Tinting",
+        servicio_comercial_desc: "Professional business solutions. Improves energy efficiency and creates comfortable work environments.",
+        comparador_title: "See the Difference",
+        comparador_subtitle: "Drag the slider to compare before and after",
+        comparador_before: "WITHOUT Tint",
+        comparador_after: "WITH Tint",
+        galeria_title: "Work Gallery",
+        galeria_subtitle: "Check out some of our projects",
+        about_title: "About Us",
+        about_desc1: "With years of experience in the sector, <strong>Windows Tinting JD</strong> has established itself as a leader in professional tinting services.",
+        about_desc2: "Our commitment is to quality, customer satisfaction and excellence in every job we do.",
+        about_vehiculos: "Vehicles serviced",
+        about_satisfechos: "Satisfied clients",
+        about_experiencia: "Years of experience",
+        contacto_title: "Contact Us",
+        contacto_subtitle: "We're ready to serve you",
+        contacto_whatsapp: "WhatsApp",
+        contacto_whatsapp_desc: "Chat with us",
+        contacto_whatsapp_cta: "Send message",
+        contacto_telefono: "Phone",
+        contacto_telefono_desc: "Direct calls",
+        contacto_ubicacion: "Location",
+        contacto_ubicacion_desc: "Visit our shop",
+        cta_title: "Ready to transform your vehicle?",
+        cta_desc: "Contact us today and get a no-obligation quote",
+        cta_button: "Get Quote",
+        footer_brand: "Professionalism and quality in every job",
+        footer_links: "Quick links",
+        footer_social: "Follow us",
+        footer_copyright: "All rights reserved.",
+        vehicle_sedan: "Executive Sedan",
+        vehicle_suv: "Premium SUV",
+        vehicle_deportivo: "Sports Car",
+        vehicle_camioneta: "Family Truck",
+        vehicle_luxury: "Luxury",
+        vehicle_clasico: "Classic"
+    }
+};
+
+let currentLang = 'es';
+
+function initLanguageToggle() {
+    const langToggle = document.getElementById('langToggle');
+    if (!langToggle) return;
+
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        langToggle.classList.toggle('active');
+        applyTranslations();
+    });
+}
+
+function applyTranslations() {
+    const t = translations[currentLang];
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+            el.innerHTML = t[key];
+        }
+    });
+    
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key]) {
+            el.placeholder = t[key];
+        }
+    });
+    
+    document.documentElement.lang = currentLang;
+}
 
 function initNavbar() {
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
+    const navClose = document.getElementById('navClose');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -23,6 +165,13 @@ function initNavbar() {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
+
+    if (navClose) {
+        navClose.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    }
 
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
