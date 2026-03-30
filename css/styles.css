@@ -566,6 +566,13 @@ img {
     align-items: center;
 }
 
+.about-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 24px;
+    border-radius: var(--radius-md);
+}
+
 .about-text .section-title {
     text-align: left;
     margin-bottom: 24px;
