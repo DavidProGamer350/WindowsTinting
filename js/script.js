@@ -298,7 +298,7 @@ const translations = {
     }
 };
 
-let currentLang = localStorage.getItem('lang') || 'es';
+let currentLang = localStorage.getItem('lang') || 'en';
 
 function initLanguageToggle() {
     const langToggle = document.getElementById('langToggle');

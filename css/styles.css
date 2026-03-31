@@ -184,6 +184,31 @@ img {
     background: transparent;
 }
 
+/* ========== LOGO BANNER ========== */
+.logo-banner {
+    padding: 120px 0 40px;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+    text-align: center;
+}
+
+.banner-logo {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 40px rgba(0, 123, 255, 0.3);
+    transition: transform var(--transition-normal);
+}
+
+.banner-logo:hover {
+    transform: scale(1.02);
+}
+
+.hero-tipos + .logo-banner {
+    padding: 100px 0 40px;
+}
+}
+
 .navbar.scrolled {
     background: rgba(10, 10, 15, 0.95);
     backdrop-filter: blur(10px);
@@ -198,10 +223,31 @@ img {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-text);
     letter-spacing: -0.5px;
+}
+
+.nav-logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo-text {
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .logo-text {
+        display: inline;
+    }
 }
 
 .nav-menu {
