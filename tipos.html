@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Polarizado - Windows Tinting JD</title>
+    <meta name="description" content="Conoce los diferentes tipos de polarizado para tu vehículo: Nano Cerámico, Carbón y Metalizado. Calidad garantizada.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="assets/images/logotype.jpg">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Windows Tinting <span class="accent">JD</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-close-item">
+                    <button class="nav-close" id="navClose" aria-label="Cerrar menú">&times;</button>
+                </li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="index.html#servicios" class="nav-link" data-i18n="nav_servicios">Servicios</a></li>
+                <li><a href="tipos.html" class="nav-link" data-i18n="nav_tipos">Tipos</a></li>
+                <li><a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+                <li><a href="index.html#galeria" class="nav-link" data-i18n="nav_galeria">Galería</a></li>
+                <li><a href="index.html#contacto" class="nav-link" data-i18n="nav_contacto">Contacto</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+                        <span class="lang-es">ES</span>
+                        <span class="lang-en">EN</span>
+                    </button>
+                </li>
+                <li>
+                    <a href="https://wa.me/17867934440" class="btn btn-whatsapp nav-cta" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-tipos" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title" data-i18n="tipos_title">Tipos de <span class="accent">Polarizado</span></h1>
+            <p class="hero-subtitle" data-i18n="tipos_subtitle">Conoce las mejores opciones para tu vehículo</p>
+            <p class="hero-description" data-i18n="tipos_description">Elige el tipo de polarizado ideal según tus necesidades y presupuesto. Calidad profesional garantizada.</p>
+            <div class="hero-buttons">
+                <a href="index.html#contacto" class="btn btn-primary" data-i18n="tipos_cta">Solicitar Cotización</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tipos de Polarizado -->
+    <section class="tipos-section" id="tipos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="tipos_cards_title">Nuestros Tipos de Polarizado</h2>
+                <p class="section-subtitle" data-i18n="tipos_cards_subtitle">Tecnología de vanguardia para tu comodidad</p>
+            </div>
+            <div class="tipos-grid">
+                <!-- Nano Cerámico -->
+                <div class="tipo-card tipo-ceramico" data-animate>
+                    <div class="tipo-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="tipo-title" data-i18n="tipo_nano_ceramico">Nano <span class="accent" data-i18n="tipo_ceramico">Cerámico</span></h3>
+                    <p class="tipo-description" data-i18n="tipo_ceramico_desc">La tecnología más avanzada en polarizado. Nanopartículas cerámicas que rechazan el calor sin interferir con las señales electrónicas.</p>
+                    <ul class="tipo-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_ceramico_1">Máximo rechazo del calor</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_ceramico_2">No interfiere señales</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_ceramico_3">99% protección UV</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_ceramico_4">Máxima durabilidad</span>
+                        </li>
+                    </ul>
+                    <div class="tipo-price">
+                        <span class="price-amount" data-i18n="price_ceramico">Desde $350</span>
+                        <a href="https://wa.me/17867934440?text=Hola,%20me%20interesa%20el%20polarizado%20Nano%20Cerámico" class="btn btn-primary btn-small" data-i18n="tipo_cta">Cotizar</a>
+                    </div>
+                    <div class="tipo-badge">Premium</div>
+                </div>
+
+                <!-- Carbón -->
+                <div class="tipo-card tipo-carbon" data-animate>
+                    <div class="tipo-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="tipo-title" data-i18n="tipo_carbon">Carbón</h3>
+                    <p class="tipo-description" data-i18n="tipo_carbon_desc">Excelente relación calidad-precio. Película de carbón que proporciona buen rechazo del calor con un aspecto natural y elegante.</p>
+                    <ul class="tipo-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_carbon_1">Buen rechazo del calor</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_carbon_2">Aspecto natural</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_carbon_3">Precio accesible</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_carbon_4">No se decolora</span>
+                        </li>
+                    </ul>
+                    <div class="tipo-price">
+                        <span class="price-amount" data-i18n="price_carbon">Desde $250</span>
+                        <a href="https://wa.me/17867934440?text=Hola,%20me%20interesa%20el%20polarizado%20Carbón" class="btn btn-primary btn-small" data-i18n="tipo_cta">Cotizar</a>
+                    </div>
+                    <div class="tipo-badge tipo-badge-popular" data-i18n="tipo_popular">Popular</div>
+                </div>
+
+                <!-- Metalizado -->
+                <div class="tipo-card tipo-metalizado" data-animate>
+                    <div class="tipo-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="tipo-title" data-i18n="tipo_metalizado">Metalizado</h3>
+                    <p class="tipo-description" data-i18n="tipo_metalizado_desc">Máximo rechazo del calor gracias a las partículas metálicas. Brillo distintivo y alta resistencia estructural.</p>
+                    <ul class="tipo-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_metalizado_1">Máximo rechazo del calor</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_metalizado_2">Brillo metálico</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_metalizado_3">Alta resistencia</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="tipo_metalizado_4">Efecto espejo</span>
+                        </li>
+                    </ul>
+                    <div class="tipo-price">
+                        <span class="price-amount" data-i18n="price_metalizado">Desde $200</span>
+                        <a href="https://wa.me/17867934440?text=Hola,%20me%20interesa%20el%20polarizado%20Metalizado" class="btn btn-primary btn-small" data-i18n="tipo_cta">Cotizar</a>
+                    </div>
+                    <div class="tipo-badge tipo-badge-classic" data-i18n="tipo_clasico">Clásico</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantía Section -->
+    <section class="garantia-section" id="garantia">
+        <div class="container">
+            <div class="garantia-box" data-animate>
+                <div class="garantia-icon">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <polyline points="9 12 11 14 15 10"/>
+                    </svg>
+                </div>
+                <h2 class="garantia-title" data-i18n="garantia_title">🛡️ GARANTÍA INCLUIDA 🛡️</h2>
+                <p class="garantia-subtitle" data-i18n="garantia_subtitle">Tu tranquilidad es nuestra prioridad</p>
+                
+                <div class="garantia-items">
+                    <div class="garantia-item">
+                        <div class="garantia-check">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span data-i18n="garantia_1"><strong>5 años</strong> de garantía</span>
+                    </div>
+                    <div class="garantia-item">
+                        <div class="garantia-check">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span data-i18n="garantia_2">No <strong>formará</strong> burbujas</span>
+                    </div>
+                    <div class="garantia-item">
+                        <div class="garantia-check">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span data-i18n="garantia_3">Protección UV <strong>99%</strong></span>
+                    </div>
+                    <div class="garantia-item">
+                        <div class="garantia-check">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span data-i18n="garantia_4">Instalación <strong>profesional</strong></span>
+                    </div>
+                </div>
+
+                <p class="garantia-note" data-i18n="garantia_note">*La garantía cubre defectos de fabricación y despegue premature de la película.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-animate>
+                <h2 data-i18n="tipos_cta_title">¿Aún tienes dudas?</h2>
+                <p data-i18n="tipos_cta_desc">Contáctanos y te asesoramos para elegir el mejor polarizado para tu vehículo.</p>
+                <a href="https://wa.me/17867934440?text=Hola,%20me%20interesa%20información%20sobre%20tipos%20de%20polarizado" class="btn btn-primary btn-large" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span data-i18n="tipos_whatsapp">Chatear por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Windows Tinting <span class="accent">JD</span></h3>
+                    <p data-i18n="footer_brand">Profesionalismo y calidad en cada trabajo</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_links">Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+                        <li><a href="tipos.html" data-i18n="nav_tipos">Tipos</a></li>
+                        <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
+                        <li><a href="index.html#galeria" data-i18n="nav_galeria">Galería</a></li>
+                        <li><a href="index.html#contacto" data-i18n="nav_contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer_social">Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/jd_windowstinting?igsh=czk4N2N6OG55eHFt" aria-label="Instagram" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Windows Tinting JD. <span data-i18n="footer_copyright">Todos los derechos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/17867934440" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
