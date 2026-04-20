@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initLightbox();
     initLanguageToggle();
+    initWeatherWidget();
 });
 
 const translations = {
@@ -286,6 +287,83 @@ const translations = {
 
 let currentLang = localStorage.getItem('lang') || 'en';
 
+let weatherWidget, weatherMessage, weatherTemp;
+let currentTempC = 25;
+let weatherExpanded = localStorage.getItem('weatherExpanded') === 'true';
+
+function initWeatherWidget() {
+    weatherWidget = document.getElementById('weatherWidget');
+    if (!weatherWidget) return;
+
+    weatherMessage = document.getElementById('weatherMessage');
+    weatherTemp = document.getElementById('weatherTemp');
+
+    const collapsedBtn = document.getElementById('weatherCollapsedBtn');
+    const closeBtn = document.getElementById('weatherCloseBtn');
+
+    async function fetchWeather() {
+        try {
+            const response = await fetch(
+                'https://api.open-meteo.com/v1/forecast?latitude=25.7617&longitude=-80.1918&current=temperature_2m'
+            );
+            const data = await response.json();
+            currentTempC = data.current.temperature_2m;
+            updateWeatherDisplay();
+            weatherWidget.classList.add('show');
+        } catch (error) {
+            console.error('Weather fetch error:', error);
+        }
+    }
+
+    function updateWeatherDisplay() {
+        const tempF = (currentTempC * 9/5) + 32;
+        const reduction = Math.min(60, Math.round(tempF * 1.5));
+        const collapsedText = document.getElementById('weatherCollapsedText');
+        
+        if (currentLang === 'es') {
+            weatherTemp.innerHTML = `${Math.round(currentTempC)}<span>°C</span>`;
+            weatherMessage.textContent = `Con ${Math.round(currentTempC)}°C, el polarizado reduce el calor hasta ${reduction}%`;
+            if (collapsedText) collapsedText.textContent = `${Math.round(currentTempC)}°C`;
+        } else {
+            weatherTemp.innerHTML = `${Math.round(tempF)}<span>°F</span>`;
+            weatherMessage.textContent = `With ${Math.round(tempF)}°F, tinting reduces heat up to ${reduction}%`;
+            if (collapsedText) collapsedText.textContent = `${Math.round(tempF)}°F`;
+        }
+    }
+
+    function toggleExpanded() {
+        weatherExpanded = !weatherExpanded;
+        localStorage.setItem('weatherExpanded', weatherExpanded);
+        
+        if (weatherExpanded) {
+            weatherWidget.classList.add('expanded');
+        } else {
+            weatherWidget.classList.remove('expanded');
+        }
+    }
+
+    if (collapsedBtn) {
+        collapsedBtn.addEventListener('click', toggleExpanded);
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleExpanded();
+        });
+    }
+
+    if (weatherExpanded) {
+        weatherWidget.classList.add('expanded');
+    }
+
+    window.updateWeatherWidgetLang = updateWeatherDisplay;
+    
+    fetchWeather();
+    setInterval(fetchWeather, 15 * 60 * 1000);
+    updateWeatherDisplay();
+}
+
 function initLanguageToggle() {
     const langToggle = document.getElementById('langToggle');
     if (!langToggle) return;
@@ -300,6 +378,9 @@ function initLanguageToggle() {
         localStorage.setItem('lang', currentLang);
         langToggle.classList.toggle('active');
         applyTranslations();
+        if (typeof updateWeatherWidgetLang === 'function') {
+            updateWeatherWidgetLang();
+        }
     });
 }
 
@@ -340,12 +421,25 @@ function initNavbar() {
     navToggle.addEventListener('click', () => {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
+        const weatherWidget = document.getElementById('weatherWidget');
+        const whatsappFloat = document.querySelector('.whatsapp-float');
+        if (navMenu.classList.contains('active')) {
+            if (weatherWidget) weatherWidget.style.display = 'none';
+            if (whatsappFloat) whatsappFloat.style.display = 'none';
+        } else {
+            if (weatherWidget) weatherWidget.style.display = '';
+            if (whatsappFloat) whatsappFloat.style.display = '';
+        }
     });
 
     if (navClose) {
         navClose.addEventListener('click', () => {
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
+            const weatherWidget = document.getElementById('weatherWidget');
+            const whatsappFloat = document.querySelector('.whatsapp-float');
+            if (weatherWidget) weatherWidget.style.display = '';
+            if (whatsappFloat) whatsappFloat.style.display = '';
         });
     }
 
@@ -353,6 +447,10 @@ function initNavbar() {
         link.addEventListener('click', () => {
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
+            const weatherWidget = document.getElementById('weatherWidget');
+            const whatsappFloat = document.querySelector('.whatsapp-float');
+            if (weatherWidget) weatherWidget.style.display = '';
+            if (whatsappFloat) whatsappFloat.style.display = '';
         });
     });
 }

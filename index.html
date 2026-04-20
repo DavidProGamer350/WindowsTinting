@@ -344,6 +344,28 @@
         </div>
     </footer>
 
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-widget-collapsed" id="weatherCollapsedBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/>
+            </svg>
+        </div>
+        <div class="weather-widget-expanded">
+            <div class="weather-widget-header">
+                <span class="weather-widget-title">Miami</span>
+                <button class="weather-widget-close" id="weatherCloseBtn">&times;</button>
+            </div>
+            <div class="weather-widget-temp" id="weatherTemp">
+                <div class="weather-widget-loading">
+                    <div class="weather-spinner"></div>
+                    <span>Loading...</span>
+                </div>
+            </div>
+            <div class="weather-widget-message" id="weatherMessage">With 75°F, tinting reduces heat up to 60%</div>
+        </div>
+    </div>
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/17867934440" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">

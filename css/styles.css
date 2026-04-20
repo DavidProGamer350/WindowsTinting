@@ -916,6 +916,189 @@ img {
     background: var(--color-whatsapp-hover);
 }
 
+/* ========== WEATHER WIDGET ========== */
+.weather-widget {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1000;
+    display: none;
+}
+
+.weather-widget.show {
+    display: block;
+}
+
+.weather-widget-collapsed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    animation: pulse 2s infinite;
+}
+
+.weather-widget-collapsed:hover {
+    transform: scale(1.1);
+    background: var(--color-bg-elevated);
+}
+
+.weather-widget-collapsed svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-accent);
+}
+
+.weather-widget-collapsed-text {
+    font-size: 0.85rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.weather-widget-collapsed-arrow {
+    display: none;
+}
+
+.weather-widget-expanded {
+    position: absolute;
+    bottom: 60px;
+    left: 5px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    box-shadow: var(--shadow-md);
+    max-width: calc(100vw - 60px);
+    width: 200px;
+    animation: slideIn 0.3s ease;
+    display: none;
+    right: auto;
+}
+
+.weather-widget.expanded .weather-widget-collapsed {
+    display: none;
+}
+
+.weather-widget.expanded .weather-widget-expanded {
+    display: block;
+}
+
+.weather-widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.weather-widget-title {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.weather-widget-close {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color var(--transition-fast);
+}
+
+.weather-widget-close:hover {
+    color: var(--color-text);
+}
+
+.weather-widget-temp {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.weather-widget-temp span {
+    font-size: 1rem;
+}
+
+.weather-widget-message {
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+.weather-widget-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.weather-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--color-border);
+    border-top-color: var(--color-accent);
+    border-radius: var(--radius-full);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        right: 15px;
+        bottom: 30px;
+    }
+    
+    .weather-widget {
+        left: 15px;
+        bottom: 30px;
+    }
+    
+    .weather-widget-expanded {
+        position: fixed;
+        bottom: 90px;
+        left: 20px;
+        width: 170px;
+        max-width: calc(100vw - 40px);
+        padding: 10px 12px;
+    }
+    
+    .weather-widget-temp {
+        font-size: 1.5rem;
+    }
+    
+    .weather-widget-message {
+        font-size: 0.8rem;
+    }
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 992px) {
     .hero-title {
@@ -958,6 +1141,11 @@ img {
     
     .nav-menu.active {
         right: 0;
+    }
+    
+    .nav-menu.active ~ .weather-widget,
+    .nav-menu.active ~ .whatsapp-float {
+        display: none;
     }
     
     .nav-close-item {
