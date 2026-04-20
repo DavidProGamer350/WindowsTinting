@@ -31,14 +31,14 @@
                 <li class="nav-close-item">
                     <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
                 </li>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="tipos.html" class="nav-link">Types</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav_inicio">Home</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav_servicios">Services</a></li>
+                <li><a href="tipos.html" class="nav-link" data-i18n="nav_tipos">Types</a></li>
+                <li><a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+                <li><a href="#gallery" class="nav-link" data-i18n="nav_galeria">Gallery</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contacto">Contact</a></li>
                 <li>
-                    <button class="lang-toggle active" id="langToggle" aria-label="Change language">
+                    <button class="lang-toggle" id="langToggle" aria-label="Change language">
                         <span class="lang-es">ES</span>
                         <span class="lang-en">EN</span>
                     </button>
@@ -61,8 +61,8 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1 class="hero-title">Windows Tinting <span class="accent">JD</span></h1>
-            <p class="hero-subtitle">Protection, style and comfort in one service</p>
-            <p class="hero-description">99% UV protection, protect your interior and improve your vehicle's appearance from day one.</p>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Protection, style and comfort in one service</p>
+            <p class="hero-description" data-i18n="hero_description">99% UV protection, protect your interior and improve your vehicle's appearance from day one.</p>
             <div class="hero-buttons">
                 <a href="https://wa.me/17867934440?text=Hello,%20I'm%20interested%20in%20the%20tinting%20service"
                     class="btn btn-primary" target="_blank">
@@ -70,9 +70,9 @@
                         <path
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                     </svg>
-                    <span>Get Quote</span>
+                    <span data-i18n="hero_cta">Get Quote</span>
                 </a>
-                <a href="#services" class="btn btn-outline">View Services</a>
+                <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">View Services</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -86,8 +86,8 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Professional quality in every application</p>
+                <h2 class="section-title" data-i18n="servicios_title">Our Services</h2>
+                <p class="section-subtitle" data-i18n="servicios_subtitle">Professional quality in every application</p>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-animate>
@@ -98,14 +98,13 @@
                             <path d="M8 21h8M12 17v4" />
                         </svg>
                     </div>
-                    <h3 class="service-title">Vehicle Tinting</h3>
-                    <p class="service-description">Complete protection for your vehicle. Blocks up to 99% of UV rays,
-                        reduces interior heat and improves privacy.</p>
+                    <h3 class="service-title" data-i18n="servicio_vehicular">Vehicle Tinting</h3>
+                    <p class="service-description" data-i18n="servicio_vehicular_desc">Complete protection for your vehicle. Blocks up to 99% of UV rays, reduces interior heat and improves privacy.</p>
                     <ul class="service-features">
-                        <li>UV Protection</li>
-                        <li>Heat Reduction</li>
-                        <li>Enhanced Privacy</li>
-                        <li>Elegant Appearance</li>
+                        <li data-i18n="feature_uv">UV Protection</li>
+                        <li data-i18n="feature_calor">Heat Reduction</li>
+                        <li data-i18n="feature_privacidad">Enhanced Privacy</li>
+                        <li data-i18n="feature_apariencia">Elegant Appearance</li>
                     </ul>
                 </div>
                 <div class="service-card" data-animate>
@@ -116,17 +115,16 @@
                             <polyline points="9 22 9 12 15 12 15 22" />
                         </svg>
                     </div>
-                    <h3 class="service-title">Residential Tinting</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="servicio_residencial">Residential Tinting</h3>
+                    <p class="service-description" data-i18n="servicio_residencial_desc">
                         Improve your home comfort with window films. Reduces heat, controls sunlight entry and increases privacy in your spaces.
                     </p>
                     <ul class="service-features">
-                        <li>Interior Heat Reduction</li>
-                        <li>Sunlight Control</li>
-                        <li>Greater Privacy</li>
-                        <li>UV Ray Protection</li>
-                        <li>Energy Efficiency</li>
-                    </ul>
+                        <li data-i18n="feature_calor_interior">Interior Heat Reduction</li>
+                        <li data-i18n="feature_luz_solar">Sunlight Control</li>
+                        <li data-i18n="feature_privacidad2">Greater Privacy</li>
+                        <li data-i18n="feature_uv_proteccion">UV Ray Protection</li>
+                        <li data-i18n="feature_eficiencia">Energy Efficiency</li>
                     </ul>
                 </div>
                 <div class="service-card" data-animate>
@@ -139,13 +137,13 @@
                             <line x1="16" y1="6" x2="16" y2="6" />
                         </svg>
                     </div>
-                    <h3 class="service-title">Commercial Tinting</h3>
-                    <p class="service-description">Professional business solutions. Improves energy efficiency and creates comfortable work environments.</p>
+                    <h3 class="service-title" data-i18n="servicio_comercial">Commercial Tinting</h3>
+                    <p class="service-description" data-i18n="servicio_comercial_desc">Professional business solutions. Improves energy efficiency and creates comfortable work environments.</p>
                     <ul class="service-features">
-                        <li>Energy Efficiency</li>
-                        <li>Professional Image</li>
-                        <li>Confidentiality</li>
-                        <li>Quick Installation</li>
+                        <li data-i18n="feature_energetica">Energy Efficiency</li>
+                        <li data-i18n="feature_imagen">Professional Image</li>
+                        <li data-i18n="feature_confidencial">Confidentiality</li>
+                        <li data-i18n="feature_instalacion">Quick Installation</li>
                     </ul>
                 </div>
             </div>
@@ -156,19 +154,17 @@
     <section class="comparison" id="comparison">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">See the Difference</h2>
-                <p class="section-subtitle">Drag the slider to compare before and after</p>
+                <h2 class="section-title" data-i18n="comparador_title">See the Difference</h2>
+                <p class="section-subtitle" data-i18n="comparador_subtitle">Drag the slider to compare before and after</p>
             </div>
             <div class="comparison-container" id="comparisonSlider">
                 <div class="comparison-image comparison-after">
-                    <img src="assets/images/after.png" alt="Vehicle with tinting"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22><rect fill=%22%231a1a2e%22 width=%22800%22 height=%22500%22/><text x=%22400%22 y=%22250%22 text-anchor=%22middle%22 fill=%22%23fff%22 font-size=%2230%22>Image WITH Tinting</text></svg>'">
-                    <span class="comparison-label">WITH Tinting</span>
+                    <img src="assets/images/after.png" alt="Vehicle with tinting">
+                    <span class="comparison-label" data-i18n="comparador_after">WITH Tinting</span>
                 </div>
                 <div class="comparison-image comparison-before">
-                    <img src="assets/images/before.png" alt="Vehicle without tinting"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22><rect fill=%22%23333%22 width=%22800%22 height=%22500%22/><text x=%22400%22 y=%22250%22 text-anchor=%22middle%22 fill=%22%23fff%22 font-size=%2230%22>Image WITHOUT Tinting</text></svg>'">
-                    <span class="comparison-label">WITHOUT Tinting</span>
+                    <img src="assets/images/before.png" alt="Vehicle without tinting">
+                    <span class="comparison-label" data-i18n="comparador_before">WITHOUT Tinting</span>
                 </div>
                 <div class="comparison-slider" id="comparisonHandle">
                     <div class="comparison-arrow">
@@ -188,38 +184,27 @@
     <section class="gallery" id="gallery">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Work Gallery</h2>
-                <p class="section-subtitle">Check out some of our projects</p>
+                <h2 class="section-title" data-i18n="galeria_title">Our Work Gallery</h2>
+                <p class="section-subtitle" data-i18n="galeria_subtitle">Check out some of our projects</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-animate>
-                    <img src="assets/images/vehicle-1.jpeg" alt="Vehículo polarizado"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23222%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2220%22>Vehículo 1</text></svg>'">
+                    <img src="assets/images/vehicle-1.jpeg" alt="Tinted vehicle">
                 </div>
                 <div class="gallery-item" data-animate>
-                    <img src="assets/images/vehicle-2.jpeg" alt="Vehículo polarizado"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23222%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2220%22>Vehículo 2</text></svg>'">
-
+                    <img src="assets/images/vehicle-2.jpeg" alt="Tinted vehicle">
                 </div>
                 <div class="gallery-item" data-animate>
-                    <img src="assets/images/vehicle-3.jpeg" alt="Vehículo polarizado"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23222%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2220%22>Vehículo 3</text></svg>'">
-
+                    <img src="assets/images/vehicle-3.jpeg" alt="Tinted vehicle">
                 </div>
                 <div class="gallery-item" data-animate>
-                    <img src="assets/images/vehicle-4.jpeg" alt="Vehículo polarizado"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23222%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2220%22>Vehículo 4</text></svg>'">
-
+                    <img src="assets/images/vehicle-4.jpeg" alt="Tinted vehicle">
                 </div>
                 <div class="gallery-item" data-animate>
-                    <img src="assets/images/vehicle-5.jpg" alt="Vehículo polarizado"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23222%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2220%22>Vehículo 5</text></svg>'">
-
+                    <img src="assets/images/vehicle-5.jpg" alt="Tinted vehicle">
                 </div>
                 <div class="gallery-item" data-animate>
-                    <img src="assets/images/vehicle-6.jpg" alt="Vehículo polarizado"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23222%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2220%22>Vehículo 6</text></svg>'">
-
+                    <img src="assets/images/vehicle-6.jpg" alt="Tinted vehicle">
                 </div>
             </div>
         </div>
@@ -230,29 +215,26 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text" data-animate>
-                    <h2 class="section-title">About Us</h2>
-                    <p class="about-description">With years of experience in the industry, <strong>Windows Tinting
-                            JD</strong> has established itself as a leader in professional window tinting services.</p>
-                    <p class="about-description">Our commitment is to quality, customer satisfaction and
-                        excellence in every job we do.</p>
+                    <h2 class="section-title" data-i18n="about_title">About Us</h2>
+                    <p class="about-description" data-i18n="about_desc1">With years of experience in the industry, <strong>Windows Tinting JD</strong> has established itself as a leader in professional window tinting services.</p>
+                    <p class="about-description" data-i18n="about_desc2">Our commitment is to quality, customer satisfaction and excellence in every job we do.</p>
                     <div class="about-features">
                         <div class="about-feature">
                             <span class="feature-number">1000+</span>
-                            <span class="feature-label">Vehicles serviced</span>
+                            <span class="feature-label" data-i18n="about_vehiculos">Vehicles serviced</span>
                         </div>
                         <div class="about-feature">
                             <span class="feature-number">98%</span>
-                            <span class="feature-label">Satisfied clients</span>
+                            <span class="feature-label" data-i18n="about_satisfechos">Satisfied clients</span>
                         </div>
                         <div class="about-feature">
                             <span class="feature-number">5+</span>
-                            <span class="feature-label">Years of experience</span>
+                            <span class="feature-label" data-i18n="about_experiencia">Years of experience</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-image" data-animate>
-                    <img src="assets/images/logotype.jpg" alt="Windows Tinting JD Logo"
-                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 500 400%22><rect fill=%22%231a1a2e%22 width=%22500%22 height=%22400%22/><text x=%22250%22 y=%22200%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2224%22>Logo</text></svg>'">
+                    <img src="assets/images/logotype.jpg" alt="Windows Tinting JD Logo">
                 </div>
             </div>
         </div>
@@ -262,8 +244,8 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-subtitle">We are ready to assist you</p>
+                <h2 class="section-title" data-i18n="contacto_title">Contact Us</h2>
+                <p class="section-subtitle" data-i18n="contacto_subtitle">We are ready to assist you</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-card" data-animate>
@@ -273,9 +255,9 @@
                                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                         </svg>
                     </div>
-                    <h3>WhatsApp</h3>
-                    <p>Chat with us</p>
-                    <a href="https://wa.me/17867934440" class="btn btn-whatsapp" target="_blank">Send message</a>
+                    <h3 data-i18n="contacto_whatsapp">WhatsApp</h3>
+                    <p data-i18n="contacto_whatsapp_desc">Chat with us</p>
+                    <a href="https://wa.me/17867934440" class="btn btn-whatsapp" target="_blank" data-i18n="contacto_whatsapp_cta">Send message</a>
                 </div>
                 <div class="contact-card" data-animate>
                     <div class="contact-icon">
@@ -285,8 +267,8 @@
                                 d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                         </svg>
                     </div>
-                    <h3>Phone</h3>
-                    <p>Direct calls</p>
+                    <h3 data-i18n="contacto_telefono">Phone</h3>
+                    <p data-i18n="contacto_telefono_desc">Direct calls</p>
                     <a href="tel:+17867934440" class="btn btn-outline">+1 (786) 793-4440</a>
                 </div>
                 <div class="contact-card" data-animate>
@@ -297,21 +279,21 @@
                             <circle cx="12" cy="10" r="3" />
                         </svg>
                     </div>
-                    <h3>Location</h3>
-                    <p>Visit our shop</p>
+                    <h3 data-i18n="contacto_ubicacion">Location</h3>
+                    <p data-i18n="contacto_ubicacion_desc">Visit our shop</p>
                     <span class="location-text">Miami, Florida, USA</span>
                 </div>
             </div>
             <div class="cta-box" data-animate>
-                <h3>Ready to transform your vehicle?</h3>
-                <p>Contact us today for a free quote</p>
+                <h3 data-i18n="cta_title">Ready to transform your vehicle?</h3>
+                <p data-i18n="cta_desc">Contact us today for a free quote</p>
                 <a href="https://wa.me/17867934440?text=Hello,%20I'm%20interested%20in%20a%20quote"
                     class="btn btn-primary btn-large" target="_blank">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                     </svg>
-                    <span>Get Quote</span>
+                    <span data-i18n="cta_button">Get Quote</span>
                 </a>
             </div>
         </div>
@@ -323,21 +305,21 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Windows Tinting <span class="accent">JD</span></h3>
-                    <p>Professionalism and quality in every job</p>
+                    <p data-i18n="footer_brand">Professionalism and quality in every job</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer_links">Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="tipos.html">Types</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" data-i18n="nav_inicio">Home</a></li>
+                        <li><a href="#services" data-i18n="nav_servicios">Services</a></li>
+                        <li><a href="tipos.html" data-i18n="nav_tipos">Types</a></li>
+                        <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
+                        <li><a href="#gallery" data-i18n="nav_galeria">Gallery</a></li>
+                        <li><a href="#contact" data-i18n="nav_contacto">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h4>Follow Us</h4>
+                    <h4 data-i18n="footer_social">Follow Us</h4>
                     <div class="social-icons">
                         <a href="#" aria-label="Facebook">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -357,7 +339,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Windows Tinting JD. All rights reserved.</p>
+                <p>&copy; 2026 Windows Tinting JD. <span data-i18n="footer_copyright">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
